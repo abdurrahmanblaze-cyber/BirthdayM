@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Farzana Mim ✨</title>
+<title>Happy Birthday Farzana Mim 💖</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap');
@@ -22,19 +22,20 @@ html,body{
 
 body{
     background:#08030d;
-    color:white;
+    color:#fff;
     font-family:'Montserrat',sans-serif;
 }
 
-/* BACKGROUND */
+/* ================= BACKGROUND ================= */
+
 .bg{
     position:fixed;
     inset:0;
     background:
-    radial-gradient(circle at 15% 20%,rgba(255,0,140,.30),transparent 30%),
-    radial-gradient(circle at 85% 25%,rgba(110,0,255,.30),transparent 32%),
-    radial-gradient(circle at 50% 90%,rgba(255,30,100,.25),transparent 35%),
-    linear-gradient(135deg,#07020c,#17051f,#08030d);
+    radial-gradient(circle at 15% 15%,rgba(255,0,140,.32),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(100,0,255,.32),transparent 32%),
+    radial-gradient(circle at 50% 90%,rgba(255,30,100,.24),transparent 35%),
+    linear-gradient(135deg,#07020c,#19051f,#08030d);
 }
 
 .orb{
@@ -42,32 +43,38 @@ body{
     border-radius:50%;
     filter:blur(60px);
     opacity:.5;
+    pointer-events:none;
     animation:float 8s ease-in-out infinite alternate;
 }
 
 .orb1{
-    width:190px;
-    height:190px;
+    width:200px;
+    height:200px;
     background:#ff1493;
     top:5%;
-    left:0;
+    left:-50px;
 }
 
 .orb2{
-    width:230px;
-    height:230px;
-    background:#6d28ff;
-    right:-20px;
+    width:240px;
+    height:240px;
+    background:#702cff;
+    right:-70px;
     bottom:5%;
     animation-delay:2s;
 }
 
 @keyframes float{
-    from{transform:translate(0,0)}
-    to{transform:translate(50px,-40px)}
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(45px,-40px);
+    }
 }
 
-/* STARS */
+/* ================= STARS ================= */
+
 #stars{
     position:fixed;
     inset:0;
@@ -92,7 +99,8 @@ body{
     }
 }
 
-/* SCREENS */
+/* ================= SCREEN ================= */
+
 .screen{
     position:fixed;
     inset:0;
@@ -101,11 +109,12 @@ body{
     justify-content:center;
     text-align:center;
     padding:20px;
+    overflow:hidden;
 }
 
 .screen.active{
     display:flex;
-    animation:screenIn 1.2s ease;
+    animation:screenIn 1.1s ease;
 }
 
 @keyframes screenIn{
@@ -129,7 +138,7 @@ body{
     font-size:11px;
     letter-spacing:5px;
     text-transform:uppercase;
-    opacity:.7;
+    opacity:.72;
     margin-bottom:18px;
 }
 
@@ -137,16 +146,21 @@ h1{
     font-family:'Cormorant Garamond',serif;
     font-size:clamp(48px,12vw,100px);
     line-height:.9;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         90deg,
         #fff,
         #ff9ed5,
         #fff,
-        #ffb6e5
+        #ffc1e5
     );
+
     -webkit-background-clip:text;
     color:transparent;
-    text-shadow:0 0 35px rgba(255,80,180,.25);
+
+    text-shadow:
+    0 0 35px rgba(255,80,180,.25);
 }
 
 .subtitle{
@@ -154,48 +168,75 @@ h1{
     margin:25px auto 35px;
     line-height:1.9;
     font-size:14px;
-    opacity:.78;
+    opacity:.8;
 }
 
 button{
     border:1px solid rgba(255,255,255,.28);
     background:rgba(255,255,255,.08);
-    color:white;
+    color:#fff;
+
     padding:15px 28px;
+
     border-radius:50px;
+
     font-size:13px;
     letter-spacing:1px;
+
     cursor:pointer;
+
     backdrop-filter:blur(15px);
-    box-shadow:0 0 30px rgba(255,0,150,.2);
+
+    box-shadow:
+    0 0 30px rgba(255,0,150,.2);
+
     transition:.3s;
 }
 
 button:hover{
     transform:translateY(-3px) scale(1.04);
+
     background:rgba(255,255,255,.16);
-    box-shadow:0 0 45px rgba(255,0,180,.45);
+
+    box-shadow:
+    0 0 45px rgba(255,0,180,.45);
 }
 
-/* ENVELOPE */
+/* ================= ENVELOPE ================= */
+
 .envelope{
     width:125px;
     height:92px;
+
     margin:0 auto 30px;
+
     position:relative;
-    background:linear-gradient(135deg,#ff4fa3,#8d1aff);
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4fa3,
+        #8d1aff
+    );
+
     border-radius:10px;
+
     box-shadow:
     0 0 35px rgba(255,0,150,.5),
     0 20px 70px rgba(120,0,255,.3);
-    animation:envelopeFloat 3s ease-in-out infinite;
+
+    animation:
+    envelopeFloat 3s ease-in-out infinite;
 }
 
 .envelope:before{
     content:"";
+
     position:absolute;
+
     left:0;
     top:0;
+
     border-left:62px solid transparent;
     border-right:62px solid transparent;
     border-top:50px solid rgba(255,255,255,.25);
@@ -203,53 +244,88 @@ button:hover{
 
 .heart{
     position:absolute;
+
     left:50%;
     top:52%;
+
     transform:translate(-50%,-50%);
+
     font-size:35px;
-    filter:drop-shadow(0 0 10px white);
+
+    filter:
+    drop-shadow(0 0 10px white);
+
     z-index:2;
 }
 
 @keyframes envelopeFloat{
     0%,100%{
-        transform:translateY(0) rotate(-2deg);
+        transform:
+        translateY(0)
+        rotate(-2deg);
     }
+
     50%{
-        transform:translateY(-15px) rotate(2deg);
+        transform:
+        translateY(-15px)
+        rotate(2deg);
     }
 }
 
-/* MUSIC STATUS */
+/* ================= MUSIC STATUS ================= */
+
 .music{
     position:fixed;
+
     top:15px;
     right:15px;
+
     z-index:100;
+
     padding:9px 14px;
+
     border-radius:30px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
     backdrop-filter:blur(12px);
+
     font-size:10px;
 }
 
-/* PHOTO SECTION */
+/* ================= PHOTOS ================= */
+
 .memoryTitle{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(38px,8vw,65px);
+
+    font-size:
+    clamp(38px,8vw,65px);
+
     margin-bottom:20px;
 }
 
 .photoFrame{
     width:min(84vw,500px);
+
     height:min(61vh,550px);
+
     margin:auto;
+
     position:relative;
+
     overflow:hidden;
+
     border-radius:22px;
-    border:1px solid rgba(255,255,255,.25);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
     background:#120817;
+
     box-shadow:
     0 0 40px rgba(255,0,160,.3),
     0 25px 100px rgba(0,0,0,.7);
@@ -257,15 +333,21 @@ button:hover{
 
 .photo{
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     opacity:0;
+
     transform:scale(1.13);
+
     transition:
-        opacity 1.4s ease,
-        transform 6s ease;
+    opacity 1.4s ease,
+    transform 6s ease;
 }
 
 .photo.active{
@@ -275,154 +357,246 @@ button:hover{
 
 .photoFrame:after{
     content:"";
+
     position:absolute;
+
     inset:0;
+
     pointer-events:none;
+
     background:
     linear-gradient(
         to bottom,
-        transparent 45%,
-        rgba(0,0,0,.7)
+        transparent 42%,
+        rgba(0,0,0,.75)
     );
 }
 
 .photoCaption{
     position:absolute;
+
     z-index:5;
+
     left:20px;
     right:20px;
     bottom:20px;
+
     text-align:left;
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
     font-size:25px;
 }
 
 .counter{
     margin-top:14px;
+
     font-size:10px;
+
     letter-spacing:4px;
+
     opacity:.5;
 }
 
-/* CAKE */
+/* ================= CAKE ================= */
+
 .cake{
     width:190px;
     height:135px;
+
     position:relative;
-    margin:20px auto 35px;
+
+    margin:
+    20px auto 35px;
 }
 
 .cakeBase{
     position:absolute;
+
     bottom:0;
+
     width:190px;
     height:78px;
-    border-radius:15px 15px 25px 25px;
-    background:linear-gradient(#ff65ae,#bd176e);
-    box-shadow:0 15px 50px rgba(255,0,140,.35);
+
+    border-radius:
+    15px 15px 25px 25px;
+
+    background:
+    linear-gradient(
+        #ff65ae,
+        #bd176e
+    );
+
+    box-shadow:
+    0 15px 50px
+    rgba(255,0,140,.35);
 }
 
 .cakeTop{
     position:absolute;
+
     top:20px;
+
     width:190px;
     height:48px;
+
     border-radius:50%;
+
     background:#ff9dcc;
 }
 
 .candle{
     position:absolute;
+
     left:50%;
     top:-30px;
-    transform:translateX(-50%);
+
+    transform:
+    translateX(-50%);
+
     width:14px;
     height:55px;
-    background:linear-gradient(90deg,#fff,#ff91c8,#fff);
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #ff91c8,
+        #fff
+    );
+
     border-radius:5px;
+
     z-index:3;
 }
 
 .flame{
     position:absolute;
+
     top:-32px;
     left:50%;
-    transform:translateX(-50%);
+
+    transform:
+    translateX(-50%);
+
     width:20px;
     height:30px;
+
     background:#ffd45c;
+
     border-radius:50%;
+
     box-shadow:
     0 0 12px #ffd45c,
     0 0 35px #ff7b00;
-    animation:flame .7s infinite alternate;
+
+    animation:
+    flame .7s infinite alternate;
 }
 
 @keyframes flame{
     from{
-        transform:translateX(-50%) scale(.9) rotate(-4deg);
+        transform:
+        translateX(-50%)
+        scale(.9)
+        rotate(-4deg);
     }
+
     to{
-        transform:translateX(-50%) scale(1.1) rotate(4deg);
+        transform:
+        translateX(-50%)
+        scale(1.1)
+        rotate(4deg);
     }
 }
 
-/* FINAL */
+/* ================= FINAL ================= */
+
 .final{
     display:none;
 }
 
 .final.show{
     display:block;
-    animation:finalIn 1.5s ease;
+
+    animation:
+    finalIn 1.5s ease;
 }
 
 @keyframes finalIn{
     from{
         opacity:0;
-        transform:translateY(30px) scale(.9);
+        transform:
+        translateY(30px)
+        scale(.9);
     }
+
     to{
         opacity:1;
-        transform:translateY(0) scale(1);
+        transform:
+        translateY(0)
+        scale(1);
     }
 }
 
 .final h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(45px,10vw,80px);
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:
+    clamp(45px,10vw,80px);
+
     line-height:.95;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         90deg,
         #fff,
         #ff9ed5,
         #fff
     );
+
     -webkit-background-clip:text;
+
     color:transparent;
 }
 
 .final p{
     max-width:650px;
+
     margin:20px auto;
+
     line-height:2;
+
     font-size:14px;
+
     opacity:.85;
 }
 
-/* CELEBRATION */
+/* ================= CELEBRATION ================= */
+
 #celebrate{
     position:fixed;
+
     inset:0;
+
     z-index:50;
+
     pointer-events:none;
+
     overflow:hidden;
 }
 
 .confetti{
     position:absolute;
+
     top:-40px;
-    animation:fall linear forwards;
+
+    animation:
+    fall linear forwards;
 }
 
 @keyframes fall{
@@ -430,14 +604,18 @@ button:hover{
         transform:
         translateY(110vh)
         rotate(720deg);
+
         opacity:0;
     }
 }
 
 .floatHeart{
     position:absolute;
+
     bottom:-30px;
-    animation:heartFloat linear forwards;
+
+    animation:
+    heartFloat linear forwards;
 }
 
 @keyframes heartFloat{
@@ -445,9 +623,12 @@ button:hover{
         transform:
         translateY(-110vh)
         rotate(25deg);
+
         opacity:0;
     }
 }
+
+/* ================= MOBILE ================= */
 
 @media(max-width:600px){
 
@@ -464,56 +645,86 @@ button:hover{
 </style>
 </head>
 
+
 <body>
 
+<!-- BACKGROUND -->
+
 <div class="bg"></div>
+
 <div class="orb orb1"></div>
 <div class="orb orb2"></div>
 
 <div id="stars"></div>
+
+
+<!-- MUSIC STATUS -->
 
 <div class="music" id="musicStatus">
     🔇 Music Off
 </div>
 
 
-<!-- ==================================================
-     YOUR EXACT GITHUB AUDIO FILE
-================================================== -->
+<!-- =================================================
+     YOUR MUSIC FILE
+================================================= -->
 
-<audio id="music" loop preload="auto">
+<audio
+    id="music"
+    loop
+    preload="auto">
+
     <source
-      src="Uljhan (Music Video) Parth Srivastava, Sireesha Bhagavatula New Hindi Song T-Series (320 Kbps).mp3"
-      type="audio/mpeg">
+        src="birthday.mp3"
+        type="audio/mpeg">
+
 </audio>
 
 
-<!-- ===================== PAGE 1 ===================== -->
+<!-- =================================================
+     SCREEN 1
+================================================= -->
 
-<section class="screen active" id="screen1">
+<section
+    class="screen active"
+    id="screen1">
 
     <div class="content">
 
         <div class="envelope">
-            <div class="heart">💌</div>
+
+            <div class="heart">
+                💌
+            </div>
+
         </div>
+
 
         <div class="small">
             A Little Surprise For
         </div>
 
+
         <h1>
             Farzana Mim
         </h1>
 
+
         <p class="subtitle">
+
             Some moments are meant to be remembered,
             and some people are meant to be celebrated.
+
             Today is one of those beautiful days.
+
         </p>
 
-        <button onclick="startExperience()">
+
+        <button
+            onclick="startExperience()">
+
             🎵 Start Surprise
+
         </button>
 
     </div>
@@ -521,9 +732,13 @@ button:hover{
 </section>
 
 
-<!-- ===================== PAGE 2 ===================== -->
+<!-- =================================================
+     SCREEN 2 — PHOTOS
+================================================= -->
 
-<section class="screen" id="screen2">
+<section
+    class="screen"
+    id="screen2">
 
     <div class="content">
 
@@ -531,42 +746,64 @@ button:hover{
             Beautiful Memories
         </div>
 
+
         <div class="memoryTitle">
             Moments Worth Keeping ✨
         </div>
 
+
         <div class="photoFrame">
 
-            <!-- YOUR EXACT IMAGE FILES -->
+
+            <!-- PHOTO 1 -->
 
             <img
-              class="photo active"
-              src="IMG-20260926-WA0003.jpg"
-              alt="Memory 1">
+                class="photo active"
+                src="IMG-20260926-WA0003.jpg"
+                alt="Memory 1">
+
+
+            <!-- PHOTO 2 -->
 
             <img
-              class="photo"
-              src="IMG-20260926-WA0004.jpg"
-              alt="Memory 2">
+                class="photo"
+                src="IMG-20260926-WA0004.jpg"
+                alt="Memory 2">
+
+
+            <!-- PHOTO 3 -->
 
             <img
-              class="photo"
-              src="IMG-20260926-WA0005.jpg"
-              alt="Memory 3">
+                class="photo"
+                src="IMG-20260926-WA0005.jpg"
+                alt="Memory 3">
+
+
+            <!-- PHOTO 4 -->
 
             <img
-              class="photo"
-              src="IMG-20260926-WA0006.jpg"
-              alt="Memory 4">
+                class="photo"
+                src="IMG-20260926-WA0006.jpg"
+                alt="Memory 4">
 
-            <div class="photoCaption" id="photoCaption">
+
+            <div
+                class="photoCaption"
+                id="photoCaption">
+
                 A beautiful memory... ✨
+
             </div>
 
         </div>
 
-        <div class="counter" id="counter">
+
+        <div
+            class="counter"
+            id="counter">
+
             MEMORY 01 / 04
+
         </div>
 
     </div>
@@ -574,46 +811,72 @@ button:hover{
 </section>
 
 
-<!-- ===================== PAGE 3 ===================== -->
+<!-- =================================================
+     SCREEN 3 — CAKE
+================================================= -->
 
-<section class="screen" id="screen3">
+<section
+    class="screen"
+    id="screen3">
 
     <div class="content">
 
+
+        <!-- CAKE AREA -->
+
         <div id="cakeArea">
+
 
             <div class="small">
                 One Last Little Surprise
             </div>
 
+
             <div class="cake">
+
 
                 <div class="candle">
 
                     <div
-                      class="flame"
-                      id="flame">
+                        class="flame"
+                        id="flame">
                     </div>
 
                 </div>
 
+
                 <div class="cakeTop"></div>
+
                 <div class="cakeBase"></div>
 
             </div>
 
-            <h1 style="font-size:clamp(42px,9vw,75px)">
+
+            <h1
+                style="
+                font-size:
+                clamp(42px,9vw,75px)
+                ">
+
                 Make A Wish ✨
+
             </h1>
 
+
             <p class="subtitle">
+
                 Close your eyes for a moment,
                 make your sweetest wish,
                 and let this little celebration begin.
+
             </p>
 
-            <button onclick="makeWish()">
+
+            <button
+                onclick="makeWish()">
+
                 🎂 Blow The Candle
+
             </button>
 
         </div>
@@ -622,17 +885,23 @@ button:hover{
         <!-- FINAL MESSAGE -->
 
         <div
-          class="final"
-          id="finalMessage">
+            class="final"
+            id="finalMessage">
+
 
             <div class="small">
                 A Birthday Wish For You
             </div>
 
+
             <h2>
+
                 Happy Birthday,<br>
+
                 Farzana Mim 💖
+
             </h2>
+
 
             <p>
 
@@ -664,102 +933,142 @@ button:hover{
 </section>
 
 
+<!-- CELEBRATION -->
+
 <div id="celebrate"></div>
 
 
 <script>
 
-/* ==================================================
-   CREATE STARS
-================================================== */
+/* =================================================
+   STARS
+================================================= */
 
-const stars = document.getElementById("stars");
+const stars =
+    document.getElementById("stars");
+
 
 for(let i = 0; i < 110; i++){
 
-    const star = document.createElement("div");
+    const star =
+        document.createElement("div");
 
     star.className = "star";
+
 
     star.style.left =
         Math.random() * 100 + "%";
 
+
     star.style.top =
         Math.random() * 100 + "%";
+
 
     const size =
         Math.random() * 3 + 1;
 
+
     star.style.width =
         size + "px";
+
 
     star.style.height =
         size + "px";
 
+
     star.style.animationDelay =
         Math.random() * 3 + "s";
+
 
     stars.appendChild(star);
 }
 
 
-/* ==================================================
+/* =================================================
    SCREEN CHANGE
-================================================== */
+================================================= */
 
 function showScreen(number){
 
     document
-    .querySelectorAll(".screen")
-    .forEach(screen => {
-        screen.classList.remove("active");
-    });
+        .querySelectorAll(".screen")
+        .forEach(screen => {
+
+            screen.classList.remove("active");
+
+        });
+
 
     document
-    .getElementById("screen" + number)
-    .classList.add("active");
+        .getElementById(
+            "screen" + number
+        )
+        .classList.add("active");
 }
 
 
-/* ==================================================
+/* =================================================
    MUSIC
-   MUSIC STARTS ONLY AFTER FIRST BUTTON TAP
-================================================== */
+   FIRST BUTTON TAP STARTS MUSIC
+================================================= */
 
 const music =
     document.getElementById("music");
 
+
 const musicStatus =
-    document.getElementById("musicStatus");
+    document.getElementById(
+        "musicStatus"
+    );
+
 
 function startExperience(){
 
+    /*
+       The user has just tapped the button,
+       so mobile browsers normally allow
+       audio playback here.
+    */
+
+    music.currentTime = 0;
+
+
     music.play()
-    .then(() => {
+        .then(() => {
 
-        musicStatus.innerHTML =
-            "🎵 Music On";
+            musicStatus.innerHTML =
+                "🎵 Music On";
 
-    })
-    .catch(() => {
+        })
+        .catch((error) => {
 
-        musicStatus.innerHTML =
-            "🔇 Tap Again For Music";
+            musicStatus.innerHTML =
+                "🔇 Music Off";
 
-    });
+            console.log(
+                "Audio error:",
+                error
+            );
+
+        });
+
 
     showScreen(2);
+
 
     startPhotos();
 }
 
 
-/* ==================================================
-   CINEMATIC PHOTO SLIDESHOW
-================================================== */
+/* =================================================
+   PHOTO SLIDESHOW
+================================================= */
 
 const photos =
-    document.querySelectorAll(".photo");
+    document.querySelectorAll(
+        ".photo"
+    );
+
 
 const captions = [
 
@@ -773,6 +1082,7 @@ const captions = [
 
 ];
 
+
 let currentPhoto = 0;
 
 let photoStarted = false;
@@ -780,91 +1090,113 @@ let photoStarted = false;
 
 function startPhotos(){
 
-    if(photoStarted) return;
+    if(photoStarted)
+        return;
+
 
     photoStarted = true;
 
+
+    /*
+       Every 5 seconds
+       next photo appears.
+    */
+
     setInterval(() => {
 
+
         photos[currentPhoto]
-        .classList.remove("active");
+            .classList
+            .remove("active");
+
 
         currentPhoto++;
 
+
         /*
-          After the 4th photo,
-          go to the birthday cake.
+           After the fourth photo,
+           move to cake screen.
         */
 
         if(currentPhoto >= photos.length){
 
             currentPhoto = 0;
 
+
             setTimeout(() => {
 
                 showScreen(3);
 
-            }, 800);
+            },800);
+
 
             return;
         }
 
 
         photos[currentPhoto]
-        .classList.add("active");
+            .classList
+            .add("active");
 
 
         document
-        .getElementById("photoCaption")
-        .innerText =
-            captions[currentPhoto];
+            .getElementById(
+                "photoCaption"
+            )
+            .innerText =
+                captions[currentPhoto];
 
 
         document
-        .getElementById("counter")
-        .innerText =
-            "MEMORY 0"
-            + (currentPhoto + 1)
-            + " / 04";
+            .getElementById(
+                "counter"
+            )
+            .innerText =
+                "MEMORY 0" +
+                (currentPhoto + 1) +
+                " / 04";
 
 
-    }, 5000);
+    },5000);
 }
 
 
-/* ==================================================
+/* =================================================
    BLOW CANDLE
-================================================== */
+================================================= */
 
 function makeWish(){
 
     document
-    .getElementById("flame")
-    .style.display = "none";
+        .getElementById("flame")
+        .style.display = "none";
 
 
     document
-    .getElementById("cakeArea")
-    .style.display = "none";
+        .getElementById("cakeArea")
+        .style.display = "none";
 
 
     document
-    .getElementById("finalMessage")
-    .classList.add("show");
+        .getElementById("finalMessage")
+        .classList
+        .add("show");
 
 
     celebration();
 }
 
 
-/* ==================================================
+/* =================================================
    CELEBRATION
-================================================== */
+================================================= */
 
 function celebration(){
 
     const area =
-        document.getElementById("celebrate");
+        document.getElementById(
+            "celebrate"
+        );
 
 
     const emojis = [
@@ -890,8 +1222,10 @@ function celebration(){
         const item =
             document.createElement("div");
 
+
         item.className =
             "confetti";
+
 
         item.innerText =
             emojis[
@@ -901,23 +1235,35 @@ function celebration(){
                 )
             ];
 
+
         item.style.left =
             Math.random() * 100 + "%";
 
+
         item.style.fontSize =
-            (Math.random() * 15 + 12) + "px";
+            (Math.random() * 15 + 12)
+            + "px";
+
 
         item.style.animationDuration =
-            (Math.random() * 3 + 3) + "s";
+            (Math.random() * 3 + 3)
+            + "s";
+
 
         item.style.animationDelay =
-            (Math.random() * 1.5) + "s";
+            (Math.random() * 1.5)
+            + "s";
+
 
         area.appendChild(item);
 
+
         setTimeout(() => {
+
             item.remove();
+
         },7000);
+
     }
 
 
@@ -928,8 +1274,10 @@ function celebration(){
         const heart =
             document.createElement("div");
 
+
         heart.className =
             "floatHeart";
+
 
         heart.innerText =
             [
@@ -939,27 +1287,42 @@ function celebration(){
                 "✨",
                 "🌸"
             ][
-                Math.floor(Math.random() * 5)
+                Math.floor(
+                    Math.random() * 5
+                )
             ];
+
 
         heart.style.left =
             Math.random() * 100 + "%";
 
+
         heart.style.fontSize =
-            (Math.random() * 20 + 15) + "px";
+            (Math.random() * 20 + 15)
+            + "px";
+
 
         heart.style.animationDuration =
-            (Math.random() * 3 + 4) + "s";
+            (Math.random() * 3 + 4)
+            + "s";
+
 
         heart.style.animationDelay =
-            (Math.random() * 2) + "s";
+            (Math.random() * 2)
+            + "s";
+
 
         area.appendChild(heart);
 
+
         setTimeout(() => {
+
             heart.remove();
+
         },7000);
+
     }
+
 }
 
 </script>
